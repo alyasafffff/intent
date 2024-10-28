@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">my intent alya</string>
+    <!--explisit-->
+    <string name="move_activity">pindah aktivitas</string>
+    <string name="this_is_move_activity">ini hasil pindah aktifitas</string>
+    <string name="back_activity">aktifitas kembali</string>
+    <!--implisit-->
+    <string name="dial_number">aktifitas menelpon</string>
+
+
+</resources>

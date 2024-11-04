@@ -1,8 +1,11 @@
 package com.example.project2
 
 import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
+import android.provider.MediaStore
 import android.provider.Telephony.Mms.Intents
+import android.view.View
 import android.widget.Button
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -23,10 +26,34 @@ class MainActivity : AppCompatActivity() {
         btnMoveActivity.setOnClickListener{
             onClick()
         }
+        val btnDialNumber = findViewById<Button>(R.id.btn_dial_number)
+        btnDialNumber.setOnClickListener{
+            onDial()
+        }
+
+        val btnCam = findViewById<Button>(R.id.btn_camera)
+        btnCam.setOnClickListener{
+            onCam()
+        }
+
     }
+
+    private fun onCam() {
+        val intent = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
+        startActivity(intent)
+    }
+
+    private fun onDial() {
+        val dialNumber = "081233780346"
+        val intent = Intent(Intent.ACTION_DIAL, Uri.parse("tel:" + dialNumber))
+        startActivity(intent)
+    }
+
 
     private fun onClick() {
         val intent = Intent(applicationContext, moveActivity::class.java)
         startActivity(intent)
     }
+
+
 }

@@ -6,6 +6,7 @@
     <string name="back_activity">aktifitas kembali</string>
     <!--implisit-->
     <string name="dial_number">aktifitas menelpon</string>
+    <string name="camera">aktifitas memotret</string>
 
 
 </resources>
